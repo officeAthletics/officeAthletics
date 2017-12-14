@@ -68,9 +68,9 @@
     width: 100%;
     height: auto;
     #particles{
-      position: absolute;
+      position: relative;
       width: 100%;
-      height: 432px;
+      height: 444px;
       background-color: $bgColor;
       background-repeat: no-repeat;
       background-size: cover;
@@ -83,6 +83,7 @@
       height:auto;
       background:rgba(0,0,0,.25);
       padding-bottom: 20px;
+      top:0;
       li{
         display: inline-block;
         height:100%;
@@ -119,7 +120,6 @@
       }
       .header-side{
         width: 500px;
-        margin-top:-100px;
         .photo{
           width: 200px;
           height:200px;
@@ -164,14 +164,13 @@
       }
     }
     .content-list{
-      position: absolute;
+      position: relative;
       z-index: 111;
       width: 90%;
       height:auto;
       padding: 30px 0;
       margin-left: 5%;
       background: rgba(180,180,180,.25);
-      top: 432px;
       ul.list-ul{
         width: 100%;
         height:auto;
