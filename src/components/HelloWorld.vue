@@ -74,8 +74,6 @@
   $bgColor: rgb(0,43,90);
   .hello{
     width: 100%;
-    height: 100%;
-    overflow-y: scroll;
     #particles{
       position: relative;
       width: 100%;
@@ -99,9 +97,9 @@
         text-align: center;
         vertical-align: middle;
         &:first-child{
-          margin-left:calc((100% - 1100px) / 2);
+          margin-left:15%;
           .photo{
-            margin-left: 150px;
+            margin-left: 30%;
             background: url("../assets/img/sad.jpg") no-repeat center;
             background-size: contain;
             &:hover{
@@ -113,7 +111,7 @@
         }
         &:last-child{
           .photo{
-            margin-left: 150px;
+            margin-left: 30%;
             background: url("../assets/img/smile.jpg") no-repeat center;
             background-size: contain;
             &:hover{
@@ -128,7 +126,7 @@
         }
       }
       .header-side{
-        width: 500px;
+        width: 30%;
         .photo{
           width: 200px;
           height:200px;
@@ -139,6 +137,7 @@
           font-size:2.8rem;
           font-weight:900;
           color: $mainColor;
+          padding: 10px 0;
         }
         .detail{
           font-size:2.6rem;
@@ -147,7 +146,7 @@
         }
       }
       .header-main{
-        width: 100px;
+        width: 10%;
         margin-top:20px;
         .text-icon{
           width: 60px;
@@ -173,21 +172,20 @@
       }
     }
     .content-list{
-      width: 90%;
-      height:100%;
+      width: 100%;
+      max-width: 1200px;
       padding: 30px 0;
-      margin-left: 5%;
+      margin-left: calc((100% - 1200px) / 2);
       margin-top: -444px;
       background: rgba(180,180,180,.25);
-      overflow-y: hidden;
+      height:auto;
       ul.list-ul{
         width: 100%;
-        height:auto;
-        padding-left:calc((100% - 1080px) / 2);
+        padding-left:3%;
         padding-top: 30px;
         padding-bottom: 30px;
         li{
-          width: 270px;
+          width: 24%;
           height: 430px;
           display: inline-block;
           border:2px solid #fff;
@@ -220,11 +218,11 @@
       ul.timer-ul{
         width: 70%;
         margin-left: 15%;
-        height: auto;
         padding-top: 30px;
         li{
             &>div{
-              float: left;
+              display: inline-block;
+              vertical-align: top;
             }
           .timer-time{
             div:first-child{
@@ -240,7 +238,7 @@
             width:1px;
             height: 200px;
             border:1px solid #fff;
-            margin-right: 60px;
+            margin-right: 90px;
             margin-left: 30px;
           }
           .timer-circle{
@@ -249,14 +247,14 @@
             background:$bgColor;
             border:2px solid #fff;
             border-radius: 50%;
-            margin-left: -75px;
+            margin-left: -107px;
             &:hover{
               cursor: pointer;
               background-color: $mainColor;
             }
           }
           .timer-content{
-            width: 85%;
+            width: 80%;
             height: 200px;
             border:1px solid $bgColor;
             background: $bgColor;
@@ -264,6 +262,7 @@
             padding: 5px 10px;
             font-size: 1.4rem;
             border-radius: 5px;
+            margin-left:30px;
             .triangle{
               display: inline-block;
               width: 0;
