@@ -42,12 +42,20 @@
           <div class="list-word"></div>
         </li>
       </ul>
-      <Timeline>
-        <TimelineItem color="green">发布1.0版本</TimelineItem>
-        <TimelineItem color="green">发布2.0版本</TimelineItem>
-        <TimelineItem color="red">严重故障</TimelineItem>
-        <TimelineItem color="blue">发布3.0版本</TimelineItem>
-      </Timeline>
+      <ul class="timer-ul">
+        <li>
+          <div class="timer-time">
+            <div>12 14</div>
+            <div>2017</div>
+          </div>
+          <div class="timer-line"></div>
+          <div class="timer-circle"></div>
+          <div class="timer-content">
+            <div class="triangle"></div>
+            <div class="article">test1test1test1test1test1</div>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -66,7 +74,8 @@
   $bgColor: rgb(0,43,90);
   .hello{
     width: 100%;
-    height: auto;
+    height: 100%;
+    overflow-y: scroll;
     #particles{
       position: relative;
       width: 100%;
@@ -77,13 +86,13 @@
       background-position: 50% 50%;
     }
     .header{
-      position: absolute;
+      position: relative;
       z-index:111;
       width:100%;
-      height:auto;
+      height: 444px;
       background:rgba(0,0,0,.25);
       padding-bottom: 20px;
-      top:0;
+      top:-444px;
       li{
         display: inline-block;
         height:100%;
@@ -164,13 +173,13 @@
       }
     }
     .content-list{
-      position: relative;
-      z-index: 111;
       width: 90%;
-      height:auto;
+      height:100%;
       padding: 30px 0;
       margin-left: 5%;
+      margin-top: -444px;
       background: rgba(180,180,180,.25);
+      overflow-y: hidden;
       ul.list-ul{
         width: 100%;
         height:auto;
@@ -205,6 +214,70 @@
           .list-word{
             color: #fff;
             margin:0 4% 10px;
+          }
+        }
+      }
+      ul.timer-ul{
+        width: 70%;
+        margin-left: 15%;
+        height: auto;
+        padding-top: 30px;
+        li{
+            &>div{
+              float: left;
+            }
+          .timer-time{
+            div:first-child{
+              color: $bgColor;
+              font-size: 2rem;
+            }
+            div:last-child{
+              color: #fff;
+              font-size: 2.8rem;
+            }
+          }
+          .timer-line{
+            width:1px;
+            height: 200px;
+            border:1px solid #fff;
+            margin-right: 60px;
+            margin-left: 30px;
+          }
+          .timer-circle{
+            width: 25px;
+            height: 25px;
+            background:$bgColor;
+            border:2px solid #fff;
+            border-radius: 50%;
+            margin-left: -75px;
+            &:hover{
+              cursor: pointer;
+              background-color: $mainColor;
+            }
+          }
+          .timer-content{
+            width: 85%;
+            height: 200px;
+            border:1px solid $bgColor;
+            background: $bgColor;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            .triangle{
+              display: inline-block;
+              width: 0;
+              height: 0;
+              border-top: 20px solid transparent;
+              border-right: 30px solid $bgColor;
+              border-bottom: 10px solid transparent;
+              margin-left:-39px;
+              margin-top: -5px;
+            }
+            .article{
+              display: inline-block;
+              padding-left:10px;
+            }
           }
         }
       }
