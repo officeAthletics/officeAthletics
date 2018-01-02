@@ -73,7 +73,7 @@ module.exports = {
 
                 //404处理
                 app.use(function(req, res){
-                    res.sendErrorMessage('HTTP_CODE_404');
+                    res.render('index');
                 });
                 var port = process.env.PORT || useConfig.port || 3000;
                 app.listen(port);

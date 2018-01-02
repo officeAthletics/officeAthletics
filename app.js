@@ -7,8 +7,8 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	app = express();
 global.__ROOT__ = __dirname;
-global.publicDir = process.env.NODE_ENV?'public':'build';
-global.viewDir = process.env.NODE_ENV?'views':'build/views';
+global.publicDir = process.env.NODE_ENV?'dist':'dist';
+global.viewDir = process.env.NODE_ENV?'dist':'dist';
 app.use(function(req , res , next){
 	var method = req.method;
 	//非get post不进入后面逻辑
