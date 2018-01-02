@@ -13,10 +13,10 @@ export default {
 <style lang="scss">
   #app{
     width: 100%;
-    background-color: rgb(60,173,114);
     font-size: 1.4rem;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height:100%;
   }
 </style>

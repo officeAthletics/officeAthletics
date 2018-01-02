@@ -3,9 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import $ from 'jquery'
 import iView from 'iview'
 import 'iview/dist/styles/iview.css' //使用CSS
 import particles from 'particles.js'
+
 
 Vue.config.productionTip = false
 Vue.use(particles)

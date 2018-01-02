@@ -24,22 +24,50 @@
       </li>
     </ul>
     <div class="content-list">
-      <ul class="list-ul">
+      <ul class="list-ul" id="listUl">
         <li>
           <div class="list-photo"></div>
-          <div class="list-word"></div>
+          <div class="list-word">
+            <div>
+              仿写记点滴APP：
+               vue.js+elementui+sass
+            </div>
+          </div>
         </li>
         <li>
           <div class="list-photo"></div>
-          <div class="list-word"></div>
+          <div class="list-word">
+            <div>
+              颅脑钝性损伤分析系统：
+               jQuery+CSS+HTML
+            </div>
+          </div>
         </li>
         <li>
           <div class="list-photo"></div>
-          <div class="list-word"></div>
+          <div class="list-word">
+            <div>
+              卒中质控管理系统：
+               vue.js+sass+elementui
+            </div>
+          </div>
         </li>
         <li>
           <div class="list-photo"></div>
-          <div class="list-word"></div>
+          <div class="list-word">
+            <div>
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无暂无
+              暂无暂无暂无暂无暂无暂无暂无
+            </div>
+          </div>
         </li>
       </ul>
       <ul class="timer-ul">
@@ -52,7 +80,11 @@
           <div class="timer-circle"></div>
           <div class="timer-content">
             <div class="triangle"></div>
-            <div class="article">test1test1test1test1test1</div>
+            <div class="article">
+              <div>
+                个人主页开工，内容很少，一点点垒
+              </div>
+            </div>
           </div>
         </li>
       </ul>
@@ -65,6 +97,9 @@
     name: 'hello',
     mounted(){
       particlesJS.load('particles','static/particles.data');
+    },
+    methods:{
+
     }
   }
 </script>
@@ -74,6 +109,7 @@
   $bgColor: rgb(0,43,90);
   .hello{
     width: 100%;
+    background-color: rgb(60,173,114);
     #particles{
       position: relative;
       width: 100%;
@@ -91,15 +127,15 @@
       background:rgba(0,0,0,.25);
       padding-bottom: 20px;
       top:-444px;
+      padding-left:22.5%;
       li{
         display: inline-block;
         height:100%;
         text-align: center;
         vertical-align: middle;
         &:first-child{
-          margin-left:15%;
           .photo{
-            margin-left: 30%;
+            margin-left: calc((100% - 200px) / 2);
             background: url("../assets/img/sad.jpg") no-repeat center;
             background-size: contain;
             &:hover{
@@ -111,7 +147,7 @@
         }
         &:last-child{
           .photo{
-            margin-left: 30%;
+            margin-left: calc((100% - 200px) / 2);
             background: url("../assets/img/smile.jpg") no-repeat center;
             background-size: contain;
             &:hover{
@@ -209,9 +245,38 @@
             height: 250px;
             border:1px solid #eee;
           }
+          &:first-child{
+            .list-photo{
+              background: url("../assets/img/note.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+          &:nth-child(2){
+            .list-photo{
+              background: url("../assets/img/xingzong.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+          &:nth-child(3){
+            .list-photo{
+              background: url("../assets/img/zhikong.png") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
+          &:last-child{
+            .list-photo{
+              background: url("../assets/img/sad.jpg") no-repeat center;
+              background-size: 100% 100%;
+            }
+          }
           .list-word{
             color: #fff;
-            margin:0 4% 10px;
+            width:90%;
+            margin-left:5%;
+            margin-top: 10px;
+            height: 150px;
+            overflow: hidden;
+            word-wrap: break-word;
           }
         }
       }
@@ -264,18 +329,24 @@
             border-radius: 5px;
             margin-left:30px;
             .triangle{
-              display: inline-block;
+              float: left;
               width: 0;
               height: 0;
               border-top: 20px solid transparent;
               border-right: 30px solid $bgColor;
               border-bottom: 10px solid transparent;
-              margin-left:-39px;
+              margin-left: -39px;
               margin-top: -5px;
             }
             .article{
               display: inline-block;
               padding-left:10px;
+              div{
+                width:100%;
+                height: 194px;
+                overflow: hidden;
+                word-break: break-all;
+              }
             }
           }
         }
