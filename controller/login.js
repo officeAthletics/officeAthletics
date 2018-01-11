@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 router.post('/reg', function(req, res, next) {
+  console.log(req.body);
   if(!req.body.userAccount){
     res.send({message:'用户名不能为空'});
     return false;
