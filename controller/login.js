@@ -17,10 +17,10 @@ router.post('/reg', function(req, res, next) {
       res.send({message:'用户名已存在'});
       return false;
     }
-    useMysql.add(useSql.common.add('user'),{
+    useMysql.add(useSql.common.add('user',{
       userAccount:req.body.userAccount,
       userPassword:req.body.userPassword,
-    },function(err , data){
+    }),function(err , data){
       res.sendSqlData(err , data);
     });
   })
